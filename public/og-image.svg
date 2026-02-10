@@ -1,0 +1,83 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background gradient -->
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#F8F9FA;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#E8F4FD;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Shield gradient -->
+    <linearGradient id="shieldGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#4CAF50;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#2E7D32;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Subtle shadow filter -->
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="rgba(0,0,0,0.1)"/>
+    </filter>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bgGradient)"/>
+  
+  <!-- Decorative security pattern (subtle) -->
+  <g opacity="0.05">
+    <circle cx="100" cy="100" r="2" fill="#2196F3"/>
+    <circle cx="1100" cy="530" r="2" fill="#2196F3"/>
+    <circle cx="150" cy="550" r="1.5" fill="#2196F3"/>
+    <circle cx="1050" cy="80" r="1.5" fill="#2196F3"/>
+  </g>
+  
+  <!-- Main content container -->
+  <g transform="translate(100, 115)">
+    
+    <!-- Shield icon -->
+    <g transform="translate(0, 0)" filter="url(#shadow)">
+      <!-- Shield background -->
+      <path d="M100 50 C100 50, 70 60, 50 80 L50 180 C50 220, 70 250, 100 280 C130 250, 150 220, 150 180 L150 80 C130 60, 100 50, 100 50 Z" 
+            fill="url(#shieldGradient)" stroke="#1B5E20" stroke-width="2"/>
+      
+      <!-- Checkmark -->
+      <g transform="translate(100, 165)" fill="white">
+        <path d="M-20 -10 L-8 2 L20 -26" stroke="white" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+      </g>
+    </g>
+    
+    <!-- Lock accent (smaller, positioned near shield) -->
+    <g transform="translate(180, 50)" opacity="0.3">
+      <rect x="0" y="15" width="25" height="20" rx="3" fill="#2196F3"/>
+      <path d="M5 15 C5 10, 8 5, 12.5 5 C17 5, 20 10, 20 15" stroke="#2196F3" stroke-width="2" fill="none"/>
+    </g>
+    
+    <!-- Main text -->
+    <g transform="translate(280, 0)">
+      <!-- "Security Verification" -->
+      <text x="0" y="120" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" 
+            font-size="54" font-weight="700" fill="#313131">
+        Security Verification
+      </text>
+      
+      <!-- "Required to Continue" -->
+      <text x="0" y="180" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" 
+            font-size="36" font-weight="400" fill="#5f6368">
+        Required to Continue
+      </text>
+      
+      <!-- Subtle underline -->
+      <rect x="0" y="200" width="120" height="3" fill="#2196F3" opacity="0.6" rx="1.5"/>
+    </g>
+    
+    <!-- Additional security elements -->
+    <g transform="translate(750, 280)" opacity="0.15">
+      <!-- Hexagon pattern -->
+      <polygon points="20,0 35,10 35,25 20,35 5,25 5,10" fill="#2196F3"/>
+      <polygon points="60,20 75,30 75,45 60,55 45,45 45,30" fill="#2196F3"/>
+    </g>
+    
+  </g>
+  
+  <!-- Bottom accent line -->
+  <rect x="0" y="600" width="1200" height="30" fill="url(#bgGradient)" opacity="0.8"/>
+  <rect x="100" y="605" width="1000" height="2" fill="#2196F3" opacity="0.3"/>
+</svg>
